@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { deletePersonaje } from '../api';
+import ListaPersonajes from './ListaPersonajes';
 
 function EliminarPersonaje() {
     const [idEliminar, setIdEliminar] = useState('');
@@ -33,6 +34,7 @@ function EliminarPersonaje() {
                 </div>
                 <button type="submit">Eliminar Personaje</button>
             </form>
+            <ListaPersonajes></ListaPersonajes>
             {mensaje && <p style={{ color: 'green' }}>{mensaje}</p>}
             {error && <p style={{ color: 'red' }}>Error: {error}</p>}
         </div>
